@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>New Student Record</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="zen-shell" style="max-width: 480px;">
+        <div class="zen-header">
+            <h1>Add Student</h1>
+            <a href="/" class="zen-link-btn">&larr; Return</a>
+        </div>
+
+        <form action="/" method="POST" class="form-grid">
+            <div class="form-field">
+                <label>Student Name</label>
+                <input name="name" placeholder="Name" required />
+            </div>
+
+            <div class="form-field">
+                <label>Age</label>
+                <input name="age" type="number" placeholder="Age" required />
+            </div>
+
+            <div class="form-field">
+                <label>Enrolled Course</label>
+                <input name="course" placeholder="Course" required />
+            </div>
+
+            <div class="form-field">
+                <label>Email Address</label>
+                <input name="email" type="email" placeholder="Email" required />
+            </div>
+
+            <button type="submit" class="btn-vermilion-submit">Submit Registration</button>
+        </form>
+    </div>
+</body>
+
+</html>

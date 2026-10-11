@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+    --zen-bg: #eceff3;
+    --panel-bg: rgba(255, 255, 255, 0.88);
+    --ink-primary: #192033;
+    --ink-muted: #626d84;
+    --vermilion: #e05a47;
+    --vermilion-glow: rgba(224, 90, 71, 0.2);
+    --indigo-accent: #2e4374;
+    --border-soft: #d3d9e2;
+    --card-radius: 18px;
+    --smooth-shadow: 0 16px 36px -12px rgba(25, 32, 51, 0.08), 0 4px 12px rgba(25, 32, 51, 0.03);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--zen-bg);
+    background-image:
+        radial-gradient(#cad1dc 1px, transparent 1px),
+        linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(220, 226, 235, 0.4) 100%);
+    background-size: 24px 24px, 100% 100%;
+    color: var(--ink-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 16px;
+}
+
+/* Master Frosted Layout */
+.zen-shell {
+    width: 100%;
+    max-width: 660px;
+    background: var(--panel-bg);
+    backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: var(--card-radius);
+    box-shadow: var(--smooth-shadow);
+    padding: 40px 36px;
+}
+
+/* Zen Headings */
+.zen-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 28px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 1.85rem;
+    font-weight: 700;
+    color: var(--ink-primary);
+    letter-spacing: 0.04em;
+}
+
+/* Add / Back Primary Action Link */
+.zen-link-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--ink-primary);
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: all 0.2s ease;
+}
+
+.zen-link-btn:hover {
+    background: var(--indigo-accent);
+    transform: translateY(-1px);
+}
+
+/* Student Record Items */
+.student-deck {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.student-node {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+}
+
+.student-node:hover {
+    border-color: #b5bfcf;
+    box-shadow: 0 6px 18px rgba(25, 32, 51, 0.05);
+}
+
+.student-node .name-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--ink-primary);
+    text-decoration: none;
+}
+
+.student-node .name-link:hover {
+    color: var(--indigo-accent);
+}
+
+.node-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-tag {
+    color: var(--indigo-accent);
+    text-decoration: none;
+    font-size: 0.82rem;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: #edf1f7;
+    transition: background 0.15s;
+}
+
+.edit-tag:hover {
+    background: #dfe5f0;
+}
+
+.btn-zen-delete {
+    background: none;
+    border: none;
+    color: var(--vermilion);
+    font-size: 0.82rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 6px;
+    transition: background 0.15s;
+}
+
+.btn-zen-delete:hover {
+    background: rgba(224, 90, 71, 0.1);
+}
+
+/* Minimalist Form Controls */
+.form-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-field label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: var(--ink-muted);
+}
+
+input {
+    width: 100%;
+    padding: 12px 14px;
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    color: var(--ink-primary);
+    outline: none;
+    transition: all 0.2s;
+}
+
+input:focus {
+    border-color: var(--indigo-accent);
+    box-shadow: 0 0 0 3px rgba(46, 67, 116, 0.12);
+}
+
+.btn-vermilion-submit {
+    background: var(--vermilion);
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px var(--vermilion-glow);
+    transition: all 0.2s ease;
+    margin-top: 10px;
+}
+
+.btn-vermilion-submit:hover {
+    background: #cc4936;
+    transform: translateY(-1px);
+}
+
+/* Profile Detail Slate */
+.profile-card {
+    background: #ffffff;
+    border: 1px solid var(--border-soft);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.profile-card p {
+    padding: 10px 0;
+    border-bottom: 1px solid #f0f2f5;
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+}
+
+.profile-card p:last-child {
+    border-bottom: none;
+}
+
+.profile-card p span {
+    font-weight: 600;
+    color: var(--ink-primary);
+    margin-left: 6px;
+}

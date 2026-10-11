@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+        <%= student.name %>'s Profile
+    </title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="zen-shell" style="max-width: 520px;">
+        <div class="zen-header">
+            <h1>
+                <%= student.name %>'s Info
+            </h1>
+            <a href="/" class="zen-link-btn">&larr; Back</a>
+        </div>
+
+        <div class="profile-card">
+            <p>Age: <span>
+                    <%= student.age %>
+                </span></p>
+            <p>Course: <span>
+                    <%= student.course %>
+                </span></p>
+            <p>Email: <span>
+                    <%= student.email %>
+                </span></p>
+        </div>
+
+        <div style="display: flex; gap: 10px;">
+            <a href="/<%= student._id %>/edit" class="zen-link-btn">Edit Details</a>
+        </div>
+    </div>
+</body>
+
+</html>

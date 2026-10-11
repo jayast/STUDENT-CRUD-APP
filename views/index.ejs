@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registry</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="zen-shell">
+        <div class="zen-header">
+            <h1>Student List</h1>
+            <a href="/new" class="zen-link-btn">+ Add New Student</a>
+        </div>
+
+        <ul class="student-deck">
+            <% students.forEach(student=> { %>
+                <li class="student-node">
+                    <a href="/<%= student._id %>" class="name-link">
+                        <%= student.name %>
+                    </a>
+                    <div class="node-actions">
+                        <a href="/<%= student._id %>/edit" class="edit-tag">Edit</a>
+                        <form action="/<%= student._id %>/delete" method="POST" style="display:inline">
+                            <button type="submit" class="btn-zen-delete">Delete</button>
+                        </form>
+                    </div>
+                </li>
+                <% }) %>
+        </ul>
+    </div>
+</body>
+
+</html>
